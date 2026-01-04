@@ -1,38 +1,128 @@
-body {
+* {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
     color: #333;
+    line-height: 1.6;
 }
 
 header {
-    background-color: #0a3cff;
-    color: white;
-    padding: 30px;
-    text-align: center;
+    background: linear-gradient(135deg, #4e73df, #1cc88a);
+    color: #fff;
 }
 
-section {
-    padding: 20px;
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.hero {
+    text-align: center;
+    padding: 90px 20px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 22px;
+    background: #fff;
+    color: #333;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform .3s, box-shadow .3s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,.2);
+}
+
+.btn.whatsapp {
+    background: #25D366;
+    color: #fff;
+}
+
+main section {
+    max-width: 900px;
+    margin: auto;
+    padding: 70px 20px;
+}
+
+.gray {
+    background: #f5f5f5;
+}
+
+.services {
+    padding-left: 20px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 500px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contact-form textarea {
+    min-height: 120px;
 }
 
 footer {
-    background-color: #ddd;
+    background: #222;
+    color: #fff;
     text-align: center;
-    padding: 10px;
+    padding: 15px;
 }
+
+/* Animasyonlar */
+.fade-in {
+    animation: fadeIn 1.2s ease forwards;
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all .8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Mobil */
 @media (max-width: 600px) {
-
-    header {
-        padding: 20px;
+    .nav-links {
+        flex-direction: column;
     }
-
-    h1 {
-        font-size: 24px;
-    }
-
-    h2 {
-        font-size: 18px;
-    }
-
 }

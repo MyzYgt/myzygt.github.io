@@ -2,25 +2,74 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <title>Ana Sayfa</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Özlem Yavuz | Özel Eğitim Öğretmeni</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <body>
 
-    <header>
-        <h1>Özlem yavuz</h1>
-        <p>Kişisel web sayfama hoş gelginiz</p>
-    </header>
+<header>
+    <nav class="navbar">
+        <div class="logo">Özlem Yavuz</div>
+        <ul class="nav-links">
+            <li><a href="#hakkimda">Hakkımda</a></li>
+            <li><a href="#hizmetler">Hizmetler</a></li>
+            <li><a href="#iletisim">İletişim</a></li>
+        </ul>
+    </nav>
 
-    <section>
-        <h2>Öğretmenim</h2>
-        <p>Özel eğitim alanında tecrübeli öğretmenlik yapıyorum.</p>
-    </section>
+    <div class="hero fade-in">
+        <h1>Özel Eğitim Öğretmeni</h1>
+        <p>Bireysel, sabırlı ve planlı eğitim yaklaşımı</p>
+        <a href="#iletisim" class="btn">İletişime Geç</a>
+    </div>
+</header>
 
-    <footer>
-        <p>© 2026</p>
-    </footer>
+<main>
 
+<section id="hakkimda" class="reveal">
+    <h2>Hakkımda</h2>
+    <p>
+        Özel eğitim alanında uzun yıllardır aktif olarak öğretmenlik yapıyorum.
+        Her öğrencinin ihtiyacına özel çözümler üretmeyi hedefliyorum.
+    </p>
+</section>
+
+<section id="hizmetler" class="gray reveal">
+    <h2>Hizmetler</h2>
+    <ul class="services">
+        <li>Bireysel özel eğitim</li>
+        <li>Öğrenme güçlüğü desteği</li>
+        <li>Dikkat ve algı çalışmaları</li>
+        <li>Aile danışmanlığı</li>
+    </ul>
+</section>
+
+<section id="iletisim" class="reveal">
+    <h2>İletişim</h2>
+
+    <form class="contact-form" action="https://formsubmit.co/ozlemmyvz@gmail.com" method="POST">
+        <!-- FormSubmit için -->
+        <input type="hidden" name="_captcha" value="false">
+
+        <input type="text" name="ad" placeholder="Ad Soyad" required>
+        <input type="email" name="email" placeholder="E-posta" required>
+        <textarea name="mesaj" placeholder="Mesajınız" required></textarea>
+
+        <button type="submit" class="btn">Gönder</button>
+    </form>
+
+    <div class="contact-buttons">
+        <a href="https://wa.me/905386271511" target="_blank" class="btn whatsapp">WhatsApp</a>
+    </div>
+</section>
+
+</main>
+
+<footer>
+    <p>© 2026 Özlem Yavuz</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
