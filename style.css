@@ -168,3 +168,45 @@ footer {
         max-width: 220px;
     }
 }
+.parents-message {
+    text-align: center;
+}
+
+.parents-message p {
+    max-width: 750px;
+    margin: 0 auto 15px;
+    font-size: 1.05rem;
+}
+
+.parents-message .strong {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+.service-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.card span {
+    font-size: 2rem;
+}
+
+.card h3 {
+    margin: 10px 0;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
