@@ -91,7 +91,17 @@ main section {
 .contact-form textarea {
     min-height: 120px;
 }
+.contact-form .btn {
+    background: #4e73df;
+    color: #fff;
+    font-size: 1.05rem;
+    border: none;
+    cursor: pointer;
+}
 
+.contact-form .btn:hover {
+    background: #375acf;
+}
 footer {
     background: #222;
     color: #fff;
@@ -209,4 +219,8 @@ footer {
 .card:hover {
     transform: translateY(-8px);
     box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+.btn.phone {
+    background: #ff9800;
+    color: #fff;
 }
