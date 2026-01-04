@@ -126,3 +126,45 @@ footer {
         flex-direction: column;
     }
 }
+.about {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.about-img {
+    flex: 1;
+    max-width: 300px;
+}
+
+.about-img img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    transition: transform .4s ease, box-shadow .4s ease;
+}
+
+.about-img img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.3);
+}
+
+.about-text {
+    flex: 2;
+}
+
+.about-text p {
+    margin-bottom: 15px;
+}
+
+/* Mobil uyum */
+@media (max-width: 768px) {
+    .about {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-img {
+        max-width: 220px;
+    }
+}
