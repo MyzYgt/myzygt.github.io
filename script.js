@@ -1,11 +1,11 @@
-const reveals = document.querySelectorAll('.reveal');
+const revealElements = document.querySelectorAll('.reveal, .service-group');
 
 function revealOnScroll() {
-    reveals.forEach(el => {
+    revealElements.forEach(el => {
         const top = el.getBoundingClientRect().top;
-        const height = window.innerHeight;
+        const trigger = window.innerHeight - 80;
 
-        if (top < height - 100) {
+        if (top < trigger) {
             el.classList.add('active');
         }
     });
