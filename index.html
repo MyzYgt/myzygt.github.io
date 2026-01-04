@@ -9,6 +9,7 @@
 <body>
 
 <header>
+<li><a href="#services">Hizmetlerimiz</a></li>
     <nav class="navbar">
         <div class="logo">Özlem Yavuz</div>
         <ul class="nav-links">
@@ -71,34 +72,74 @@
 </section>
 
 <!-- HİZMETLER -->
-<section id="hizmetler" class="reveal">
-    <h2>Çalışma Alanlarım</h2>
+<section id="services" class="gray">
+  <h2 style="text-align:center;">Hizmetlerimiz</h2>
 
-    <div class="service-cards">
-        <div class="card">
-            <span>🧩</span>
-            <h3>Otizm Spektrum Bozukluğu</h3>
-            <p>Yapılandırılmış, tutarlı ve aile iş birliğiyle yürütülen bireysel çalışmalar.</p>
-        </div>
+  <div class="service-groups">
 
-        <div class="card">
-            <span>📘</span>
-            <h3>Disleksi & Öğrenme Güçlüğü</h3>
-            <p>DMP ve erken okur yazarlık destekleriyle bireysel müdahale planları.</p>
-        </div>
-
-        <div class="card">
-            <span>🎯</span>
-            <h3>Dikkat & Davranış</h3>
-            <p>ABA temelli yaklaşımlar ve davranış düzenleme çalışmaları.</p>
-        </div>
-
-        <div class="card">
-            <span>👨‍👩‍👧</span>
-            <h3>Aile Danışmanlığı</h3>
-            <p>Ailenin sürecin aktif ve güçlü bir parçası olduğu rehberlik.</p>
-        </div>
+    <div class="service-group">
+      <h3>🧠 Gelişim ve Öğrenme Destekleri</h3>
+      <ul>
+        <li><strong>Oyun Terapisi</strong> – Duygusal ifade, güvenli bağ ve zorlanmaların oyun yoluyla ele alınması</li>
+        <li><strong>Zihin Kuramı Çalışmaları</strong> – Sosyal iletişim ve duygu farkındalığı becerileri</li>
+        <li><strong>Portage Erken Eğitim (0–6 Yaş)</strong> – Aile katılımlı erken gelişim desteği</li>
+        <li><strong>İlkokula Hazırlık Programları</strong> – Dikkat, yönerge takibi ve okul olgunluğu</li>
+      </ul>
     </div>
+<div class="service-tags">
+  <span>3–6 Yaş</span>
+  <span>Okul Öncesi</span>
+  <span>Bireysel</span>
+</div>
+
+<div class="service-actions">
+  <a href="tel:+905386271511" class="btn phone">📞 Ara</a>
+  <a href="https://wa.me/905386271511" target="_blank" class="btn whatsapp">💬 WhatsApp</a>
+</div>
+
+    <div class="service-group">
+      <h3>📘 Akademik ve Öğrenme Güçlükleri</h3>
+      <ul>
+        <li><strong>DMP – Disleksi Müdahale Programı</strong> – Okuma-yazma güçlüklerine özel yapılandırılmış destek</li>
+        <li><strong>EROT</strong> – Erken okur-yazarlık risklerinin belirlenmesi</li>
+        <li><strong>Kaynaştırma Eğitimi Desteği</strong> – Okul, aile ve uzman iş birliği</li>
+      </ul>
+    </div>
+<div class="service-tags">
+  <span>3–6 Yaş</span>
+  <span>Okul Öncesi</span>
+  <span>Bireysel</span>
+</div>
+
+<div class="service-actions">
+  <a href="tel:+905386271511" class="btn phone">📞 Ara</a>
+  <a href="https://wa.me/905386271511" target="_blank" class="btn whatsapp">💬 WhatsApp</a>
+</div>
+    <div class="service-group">
+      <h3>🧩 Davranış ve Sosyal Destekler</h3>
+      <ul>
+        <li><strong>ABA Terapi</strong> – Bilimsel temelli davranış çalışmaları</li>
+        <li><strong>Davranış Problemleri</strong> – Öfke, uyum, sınır koyma alanlarında bireysel müdahale</li>
+        <li><strong>Otizm Destek Programları</strong> – İletişim ve günlük yaşam becerileri</li>
+        <li><strong>Yaşam Koçluğu (Çocuk & Ergen)</strong> – Özgüven, motivasyon ve hedef belirleme</li>
+      </ul>
+    </div>
+<div class="service-tags">
+  <span>3–6 Yaş</span>
+  <span>Okul Öncesi</span>
+  <span>Bireysel</span>
+</div>
+
+<div class="service-actions">
+  <a href="tel:+905386271511" class="btn phone">📞 Ara</a>
+  <a href="https://wa.me/905386271511" target="_blank" class="btn whatsapp">💬 WhatsApp</a>
+</div>
+  </div>
+
+  <p class="services-footer">
+    <strong>Her çocuk ilerler. Doğru destekle.</strong><br>
+    İlk adım, çocuğu doğru tanımakla başlar.
+  </p>
 </section>
 
 <!-- İLETİŞİM -->
@@ -133,5 +174,22 @@
 </footer>
 
 <script src="script.js"></script>
+<script>
+  const serviceCards = document.querySelectorAll('.service-group');
+
+  const revealServices = () => {
+    serviceCards.forEach(card => {
+      const cardTop = card.getBoundingClientRect().top;
+      const trigger = window.innerHeight - 80;
+
+      if (cardTop < trigger) {
+        card.classList.add('active');
+      }
+    });
+  };
+
+  window.addEventListener('scroll', revealServices);
+  revealServices();
+</script>
 </body>
 </html>
