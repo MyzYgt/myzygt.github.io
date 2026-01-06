@@ -1,90 +1,92 @@
-body {
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f4f6f9;
-  color: #222;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.menu {
-  background: white;
-  padding: 15px;
-  text-align: center;
-  box-shadow: 0 2px 10px rgba(0,0,0,.1);
+body {
+  background: #f6f7fb;
+  color: #333;
 }
 
-.menu a {
-  margin: 0 15px;
-  text-decoration: none;
-  font-weight: bold;
-  color: #2563eb;
-}
-
-.hero {
-  background: linear-gradient(120deg,#2563eb,#22c55e);
-  color: white;
-  padding: 100px 20px;
-  text-align: center;
-}
-
-.hero-text {
-  max-width: 600px;
-  margin: auto;
-}
-
-.intro {
+/* ÜST MENÜ – BUTONLU */
+nav {
   display: flex;
-  gap: 30px;
-  padding: 60px;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.intro img {
-  width: 260px;
-  border-radius: 12px;
-}
-
-.highlight {
-  background: #e0f2fe;
-  padding: 50px;
-}
-
-.page {
-  padding: 60px;
-  max-width: 900px;
-  margin: auto;
-}
-
-.btn {
-  display: inline-block;
-  padding: 12px 25px;
-  margin: 10px;
-  background: #2563eb;
-  color: white;
-  border-radius: 30px;
-  text-decoration: none;
-}
-
-.whatsapp {
-  background: #16a34a;
-}
-blockquote {
-  background: #f1f5f9;
+  justify-content: center;
+  gap: 15px;
   padding: 20px;
-  margin: 20px 0;
-  border-left: 5px solid #2563eb;
-  font-style: italic;
+  background: #ffffff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
-.highlight-box {
-  background: #e0f2fe;
-  padding: 25px;
-  margin: 30px 0;
-  border-radius: 10px;
+nav a {
+  text-decoration: none;
+  padding: 12px 22px;
+  border-radius: 30px;
+  background: linear-gradient(to bottom, #e8ecf7, #d6def5);
+  color: #2c3e50;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+nav a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+  background: linear-gradient(to bottom, #d6def5, #c4cff0);
+}
+
+/* SAYFA GENEL */
+.container {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+/* BAŞLIKLAR */
+h1 {
   text-align: center;
+  margin-bottom: 25px;
 }
 
-.closing {
-  font-size: 1.1em;
-  margin-top: 30px;
+p {
+  line-height: 1.6;
+}
+
+/* HİZMETLER – BALON KARTLAR */
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.service-card {
+  background: linear-gradient(to bottom, #ffffff, #eef1fb);
+  border-radius: 25px;
+  padding: 25px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.service-card h3 {
+  margin-bottom: 10px;
+}
+
+.service-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 20px 35px rgba(0,0,0,0.18);
+  background: linear-gradient(to bottom, #fdfefe, #e3e8fb);
+}
+
+.service-card:active {
+  transform: translateY(-2px) scale(0.98);
+}
+
+/* MOBİL */
+@media (max-width: 600px) {
+  nav {
+    flex-wrap: wrap;
+  }
 }
