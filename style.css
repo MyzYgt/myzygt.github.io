@@ -139,3 +139,12 @@ nav a:hover {
 .call { background: #2563eb; }
 .whatsapp { background: #22c55e; }
 .mail { background: #6366f1; }
+.service-icon {
+  font-size: 32px;
+  margin-bottom: 12px;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+  transform: scale(1.15);
+}
