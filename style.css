@@ -1,109 +1,41 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-}
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; }
+body { background: #f4f7f6; color: #333; overflow-x: hidden; width: 100%; }
 
-body {
-  background: #f4f7f6;
-  color: #333;
-  overflow-x: hidden;
-  width: 100%;
-}
+/* NAV */
+nav { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; padding: 20px; background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+nav a { text-decoration: none; padding: 10px 20px; border-radius: 25px; color: #555; font-weight: 600; font-size: 14px; background: #f8f9fa; transition: 0.3s; }
+nav a.active, nav a:hover { background: #6366f1; color: white; }
 
-/* --- NAVİGASYON --- */
-nav {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 10px;
-  padding: 20px;
-  background: white;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-}
+/* KART VE YAPI */
+.hero { padding: 40px 20px; display: flex; justify-content: center; }
+.card { background: white; width: 100%; max-width: 650px; padding: 40px; border-radius: 25px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); text-align: center; }
+.wide-card { max-width: 850px; } /* Hizmetler sayfası için biraz daha geniş */
 
-nav a {
-  text-decoration: none;
-  padding: 10px 20px;
-  border-radius: 25px;
-  color: #555;
-  font-weight: 600;
-  font-size: 14px;
-  transition: 0.3s;
-  background: #f8f9fa;
-}
+h1 { font-size: 2.2rem; color: #1a1a1a; margin-bottom: 10px; }
+.divider { height: 3px; width: 40px; background: #6366f1; margin: 15px auto 25px; border-radius: 2px; }
+p { margin-bottom: 15px; color: #555; line-height: 1.7; }
 
-nav a.active, nav a:hover {
-  background: #6366f1;
-  color: white;
-}
+/* HİZMETLER GRID */
+.services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 20px; }
+.s-item { background: #f9fafb; padding: 25px; border-radius: 20px; border: 1px solid #eee; transition: 0.3s; }
+.s-item:hover { transform: translateY(-5px); border-color: #6366f1; }
+.s-icon { font-size: 40px; display: block; margin-bottom: 10px; }
 
-/* --- ANA KART (ORTALI YAPI) --- */
-.hero {
-  padding: 40px 20px;
-  display: flex;
-  justify-content: center;
-}
+/* İLETİŞİM LİSTESİ */
+.contact-list { margin: 25px 0; padding: 20px; background: #f9fafb; border-radius: 20px; }
+.c-unit p { margin-bottom: 5px; }
 
-.card {
-  background: white;
-  width: 100%;
-  max-width: 600px; /* Çok genişleyip yapıyı bozmaz */
-  padding: 40px 30px;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-  text-align: center;
-}
-
-.profile-img {
-  width: 160px;
-  height: 160px;
-  border-radius: 50%; /* Tam yuvarlak, daha yumuşak durur */
-  object-fit: cover;
-  margin-bottom: 20px;
-  border: 5px solid #f4f7f6;
-}
-
-h1 { font-size: 2rem; color: #1a1a1a; margin-bottom: 5px; }
-.subtitle { color: #6366f1; font-weight: 600; font-size: 1.1rem; }
-
-.divider {
-  height: 2px;
-  width: 50px;
-  background: #6366f1;
-  margin: 20px auto;
-}
-
-.quote { font-style: italic; color: #666; margin-bottom: 20px; }
-.bio { color: #555; line-height: 1.6; margin-bottom: 30px; }
-
-/* --- BUTONLAR --- */
-.btns {
-  display: flex;
-  gap: 15px;
-  justify-content: center;
-}
-
-.btn {
-  padding: 12px 25px;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 15px;
-  transition: 0.3s;
-  flex: 1; /* Eşit genişlikte olurlar */
-  max-width: 180px;
-}
-
+/* BUTONLAR */
+.btns { display: flex; gap: 15px; justify-content: center; }
+.btn { padding: 14px 25px; border-radius: 12px; text-decoration: none; font-weight: 700; transition: 0.3s; flex: 1; max-width: 200px; }
 .primary { background: #6366f1; color: white; }
 .secondary { background: #e5e7eb; color: #4b5563; }
+.btn:hover { opacity: 0.9; transform: translateY(-2px); }
 
-.btn:hover { transform: translateY(-2px); opacity: 0.9; }
-
-/* --- MOBİL AYAR --- */
-@media (max-width: 500px) {
+/* MOBİL AYARLAR */
+@media (max-width: 600px) {
   .btns { flex-direction: column; align-items: center; }
   .btn { width: 100%; max-width: none; }
-  .card { padding: 30px 20px; }
+  .card { padding: 30px 20px; border-radius: 0; }
+  h1 { font-size: 1.8rem; }
 }

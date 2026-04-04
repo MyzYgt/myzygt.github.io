@@ -2,8 +2,8 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
-  <title>Hizmetlerimiz | Özlem Yavuz</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hizmetlerimiz | Özlem Yavuz</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,36 +11,43 @@
 <nav>
   <a href="index.html">Anasayfa</a>
   <a href="hakkimda.html">Hakkımda</a>
-  <a href="hizmetler.html">Hizmetler</a>
+  <a href="hizmetler.html" class="active">Hizmetler</a>
   <a href="iletisim.html">İletişim</a>
 </nav>
 
-<div class="page-card">
-  <h1>Hizmetlerimiz</h1>
-  <div class="services">
-    <div class="service-card">
-      <span class="service-icon">🎲</span>
-      <h3>Oyun Terapisi</h3>
-      <p>Çocukların duygularını oyun yoluyla güvenle ifade etmelerini destekler.</p>
+<section class="hero">
+  <div class="card wide-card">
+    <h1>Hizmetlerimiz</h1>
+    <div class="divider"></div>
+    
+    <div class="services-grid">
+      <div class="s-item">
+        <span class="s-icon">🎲</span>
+        <h3>Oyun Terapisi</h3>
+        <p>Çocukların duygularını oyun yoluyla ifade etmelerini sağlar.</p>
+      </div>
+      <div class="s-item">
+        <span class="s-icon">🧠</span>
+        <h3>Zihin Kuramı</h3>
+        <p>Sosyal iletişim ve empati becerilerini geliştirir.</p>
+      </div>
+      <div class="s-item">
+        <span class="s-icon">📊</span>
+        <h3>ABA Terapi</h3>
+        <p>Bilimsel temelli davranış destek programları.</p>
+      </div>
+      <div class="s-item">
+        <span class="s-icon">📘</span>
+        <h3>Disleksi Müdahale</h3>
+        <p>Okuma ve yazma güçlüklerine özel bireysel destek.</p>
+      </div>
     </div>
-    <div class="service-card">
-      <span class="service-icon">🧠</span>
-      <h3>Zihin Kuramı</h3>
-      <p>Sosyal iletişim ve empati becerilerinin gelişimini destekler.</p>
-    </div>
-    <div class="service-card">
-      <span class="service-icon">📊</span>
-      <h3>ABA Terapi</h3>
-      <p>Bilimsel temelli davranış destek çalışmaları yürütülür.</p>
-    </div>
-    <div class="service-card">
-      <span class="service-icon">📘</span>
-      <h3>Disleksi Müdahale</h3>
-      <p>Okuma-yazma güçlüğü yaşayan çocuklara yönelik programlar.</p>
+
+    <div class="btns" style="margin-top:30px;">
+      <a href="iletisim.html" class="btn primary">Bilgi Al</a>
     </div>
   </div>
-</div>
+</section>
 
-<script src="script.js"></script>
 </body>
 </html>
